@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-body {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: blanchedalmond;
+    padding: 20px;
+    width: 100%;
+}
+
+.PasswordGenarated {
+    width: 100%;
+}
+
+.Lower-Selector {
+    width: 100%;
+    text-align: justify;
+}
+
+.Upper-Selector {
+    width: 100%;
+    text-align: justify;
+}
+
+.Num-Selector {
+    width: 100%;
+    text-align: justify;
+}
+
+.Special-Selector {
+    width: 100%;
+    text-align: justify;
+}
+
