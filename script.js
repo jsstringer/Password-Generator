@@ -10,15 +10,15 @@
 
 $(document).ready(function () {
 
+
+
     var lowerCaseLetters = document.getElementById("LowerSelector").value;
     var upperCaseLetters = document.getElementById("UpperSelector").value;
 
-    $("#LowerSelector").on("click", function () {
-        //if (document.getElementById("#LowerSelector").checked) {
-            // rate_value = document.getElementById().value;
-        console.log("LowerSelector" );
-        //}
-    });
+    
+
+    // checkboxes with new varables
+
 
     function passwordGen() {
         let values = "abcdefghijklmnopqrstuvwyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()_+";
@@ -34,6 +34,11 @@ $(document).ready(function () {
 
     document.getElementById("Password-Genarated").value = password;
 
+            //use vaules for password selection
+            //include slectect checked boxes
+            
+
+            //send randpawword to text box
     //document.getElementById("")
 
             
@@ -70,3 +75,11 @@ $(document).ready(function () {
             //document.execCommand("copy");
             //alert("Copied the text: " + copyText.value);
 });
+
+$("#LowerSelector").on("click", function () {
+    //if (document.getElementById("#LowerSelector").checked) {
+        // rate_value = document.getElementById().value;
+    console.log("LowerSelector" );
+    //}
+}); // check box true/false
+    // var checkbox
