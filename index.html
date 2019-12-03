@@ -30,27 +30,31 @@
               <h3>
                 Password Generator</h3>
               <hr>
-                <input type="text" class="Password-Genarated">
+                <input type="text" class="PasswordGenarated">
+                <br>
+                <br>
+                <p>Select Number of Characters requried
+                <input type="number" id="NumCharacters" value="25" min="8" max="128" />
+                </p>
                 <br>
                 <p>Include Lowercase letters
-                
                 <input type="checkbox" id="LowerSelector" value="lower">
-              </p>
+                </p>
                 <br>
                 <p>Include Uppercase letters
-                <input type="radio" id="UpperSelector">
+                <input type="checkbox" id="UpperSelector" value="upper">
                 </p>
                 <br>
                 <p>Include Numbers
-                    <input type="radio" id="NumSelector">
+                <input type="checkbox" id="NumSelector" value="num">
                 </p>
                 <br>
                 <p>Include Special Characters
-                <input type="radio" id="SpecialSelector">
+                <input type="checkbox" id="SpecialSelector" value="special">
                 </p>
                 <br>
-                <button class="Genarate-code">Generate</button>
-                <button class="Copy-to-clipboard">Copy to Clipboard</button>
+                <button type="submit" class="genaratecode">Generate</button>
+                <button type="copy" class="Copy-to-clipboard">Copy to Clipboard</button>
             </div>
           </div>
         </div>
