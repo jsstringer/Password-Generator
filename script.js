@@ -25,10 +25,10 @@ $(document).ready(function () {
 
 
 
-var length = parseInt(prompt(
+var numCharacters = parseInt(prompt(
     "How many characters would you like your password to contain?"
   ));
-  parseInt(document.getElementById("NumCharacters").value = numCharacters);
+//   parseInt(document.getElementById("NumCharacters").value = numCharacters);
 
 var  hasspecialSelector = confirm(
     "Click OK to confirm including special characters."
@@ -59,21 +59,21 @@ function password (numCharacters){
         if (lowerSelector === true) {
             password = (result[lowerSelector] + 1);
         }
-        else (lowerSelector === false){
+        else {
             console.log("not added");
         }
 
         if (upperSelector === true){
             password = (result[upperSelector] + 1);
         }
-        else (upperSelector === false){
+        else {
             console.log("not added");
         }
         if (numSelector === true){
             password = (result[numSelector] + 1);
             //password = (NumCharacters + ( 1 * NumSelector));
         }
-        else (numSelector === false){
+        else {
             console.log("not added");
         }
 
@@ -81,7 +81,7 @@ function password (numCharacters){
             password = (result[specialSelector] + 1);
             
         }
-        else (specialSelector === false){
+        else {
             console.log("not added");
         }
 
@@ -97,10 +97,7 @@ function password (numCharacters){
 
         //use vaules for password selection
         //include select checked boxes
-        //document.getElementById("")
-
-
-
+        //document.getElementById(""
 };       
     //var passwordOptions = {
     //    length: length,
@@ -108,45 +105,9 @@ function password (numCharacters){
     //    hasNumericCharacters: hasNumericCharacters,
     //    hasLowerCasedCharacters: hasLowerCasedCharacters,
     //    hasUpperCasedCharacters: hasUpperCasedCharacters
-  };
-
-  console.log(passwordOptions);
-
-pass = [];
-
-// if conditions and the divide length based on the conditions
-/*$(".genaratecode").on("click", function (event) {
-    event.preventDefault();
-    var characters = "";
-
-    (document.getElementById("LowerSelector")) ? characters += lowerSelector : "";
-    (document.getElementById("UpperSelector")) ? characters += upperSelector : "";
-    (document.getElementById("NumSelector")) ? characters += numSelector : "";
-    (document.getElementById("SpecialSelector")) ? characters += specialSelector : "";
-    console.log("78;" .getElementById + characters);
-    console.log("NumCharacters.value, : "+ NumCharacters.value);
-    console.log("Ncharacters, : "+characters);
-        var value = password(NumCharacters.value, characters);
-    console.log("passwordGen ---> " +value);
-});
   
 
-    // set onclick for each choice question
-    //Lower - Selector.addEventListener("click", function (event) {
-    //include select checked boxes
-    /*$("#LowerSelector").on("click", function () {
-        
+//   console.log(passwordOptions);
 
-     //when any choice is clicked
-    //document.getElementById("Lower-Selector")
-    // get userChoice from button (which did user choose?)
-    // Return password results
-    //send random password to text box
-    
-
-
-
-
-    // Copy to clipboard
-    //set clickListener // <button onclick="myFunction()">Copy text</button>
-    //function myFunction() {)
+pass = [];
+});
