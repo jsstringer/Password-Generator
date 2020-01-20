@@ -10,10 +10,14 @@
 
 $(document).ready(function () {
     //use vaules for password selection
-    var LowerSelector = "abcdefghijklmnopqrstuvwyz";
-    var UpperSelector = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    var NumSelector = "1234567890";
-    var SpecialSelector = "!@#$%^&*()_+";
+
+
+    var lowerSelector = "abcdefghijklmnopqrstuvwyz";
+    var upperSelector = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var numSelector = "1234567890";
+    var specialSelector = "!@#$%^&*()_+";
+
+    characters = ['abcdefghijklmnopqrstuvwyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ','1234567890','!@#$%^&*()_+'];
 
    // var LowerSelector = document.getElementById("LowerSelector");
     //var UpperSelector = document.getElementById("UpperSelector");
@@ -21,48 +25,113 @@ $(document).ready(function () {
    // var SpecialSelector = document.getElementById("SpecialSelector");
     var genaratecode = document.getElementById("Genaratecode");
     var PasswordGenarated = document.getElementById("PasswordGenarated")
-    var NumCharacters = document.getElementById("NumCharacters");
+    var numCharacters = document.getElementById("NumCharacters");
     // checkboxes with new varables
 
-    function password(l,NumCharacters){
-        var password = "";
-        console.log("line29-passwordfunction");
-        // issue how to make the for loop = the new lower, upper, num & special vaules
-        //create for loop to choose password charaters
-        for (var i = 0; i<l; i++){
 
-            check = $("#LowerSelector").prop("checked");
-            if (check){
-                password = (NumCharacters + ( 1 * LowerSelector));
-            }
+var length = parseInt(prompt(
+    "How many characters would you like your password to contain?"
+  ));
+  parseInt(document.getElementById("NumCharacters").value = numCharacters);
 
-            check = $("#UpperSelector").prop("checked");
-            if (check){
-                password = (NumCharacters + (1 * UpperSelector));
-            }
+var  hasspecialSelector = confirm(
+    "Click OK to confirm including special characters."
+  );
 
-            check = $("#NumSelector").prop("checked");
-            if (check){
-                password = (NumCharacters + (1 * NumSelector));
-            }
+  // Variable to store boolean regarding the inclusion of numeric characters
+var  hasnumSelector = confirm(
+    "Click OK to confirm including numeric characters."
+  );
 
-            check = $("#SpecialSelector").prop("checked");
-            if (check){
-                password = (NumCharacters + (1 * SpecialSelector));
-            }
+// Variable to store boolean regarding the inclusion of lowercase characters
+var  haslowerSelector = confirm(
+"Click OK to confirm including lowercase characters."
+);
+
+// Variable to store boolean regarding the inclusion of uppercase characters
+var hasupperSelector = confirm(
+"Click OK to confirm including uppercase characters."
+);
+
+function password (numCharacters){
+    var password = {};
+    console.log("line29-passwordfunction");
+    // issue how to make the for loop = the new lower, upper, num & special vaules
+    //create for loop to choose password charaters
+    for (var ii = 0; ii <characters.length; ii++){
         
-
-            console.log("Math.floor(Math.random() + NumCharacters.length) "+Math.floor(Math.random()   *8));
-            password += NumCharacters.charAt(Math.floor(Math.random() * 9));
+        if (lowerSelector === true) {
+            password = (result[lowerSelector] + 1);
         }
-            return password;
-            //use vaules for password selection
-            //include select checked boxes
-            //document.getElementById("")
-    
-    
+        else (lowerSelector === false){
+            console.log("not added");
+        }
 
+        if (upperSelector === true){
+            password = (result[upperSelector] + 1);
+        }
+        else (upperSelector === false){
+            console.log("not added");
+        }
+        if (numSelector === true){
+            password = (result[numSelector] + 1);
+            //password = (NumCharacters + ( 1 * NumSelector));
+        }
+        else (numSelector === false){
+            console.log("not added");
+        }
+
+        if (specialSelector === true){
+            password = (result[specialSelector] + 1);
+            
+        }
+        else (specialSelector === false){
+            console.log("not added");
+        }
+
+        console.log("Math.floor(Math.random() + numCharacters.length) " + Math.floor(Math.random() ));
+     
+    //___________________________________________________________________
+        password += numCharacters.charAt(Math.floor(Math.random() * 9));
+    
+        return password;
+    //--------------------------------------------------------------------    
     };
+
+        //use vaules for password selection
+        //include select checked boxes
+        //document.getElementById("")
+
+
+
+};       
+    //var passwordOptions = {
+    //    length: length,
+    //    hasSpecialCharacters: hasSpecialCharacters,
+    //    hasNumericCharacters: hasNumericCharacters,
+    //    hasLowerCasedCharacters: hasLowerCasedCharacters,
+    //    hasUpperCasedCharacters: hasUpperCasedCharacters
+  };
+
+  console.log(passwordOptions);
+
+pass = [];
+
+// if conditions and the divide length based on the conditions
+$(".genaratecode").on("click", function (event) {
+    event.preventDefault();
+    var characters = "";
+
+    (document.getElementById("LowerSelector")) ? characters += lowerSelector : "";
+    (document.getElementById("UpperSelector")) ? characters += upperSelector : "";
+    (document.getElementById("NumSelector")) ? characters += numSelector : "";
+    (document.getElementById("SpecialSelector")) ? characters += specialSelector : "";
+    console.log("78;" .getElementById + characters);
+    console.log("NumCharacters.value, : "+ NumCharacters.value);
+    console.log("Ncharacters, : "+characters);
+        var value = password(NumCharacters.value, characters);
+    console.log("passwordGen ---> " +value);
+});
   
 
     // set onclick for each choice question
@@ -112,19 +181,7 @@ $(document).ready(function () {
         }
         console.log("special");
     });*/
-    $(".genaratecode").on("click", function (event) {
-        event.preventDefault();
-        var characters = "";
-        (document.getElementById("LowerSelector").checked) ? characters += LowerSelector : "";
-        (document.getElementById("UpperSelector").checked) ? characters += UpperSelector : "";
-        (document.getElementById("NumSelector").checked) ? characters += NumSelector : "";
-        (document.getElementById("SpecialSelector").checked) ? characters += SpecialSelector : "";
-        console.log("78;" .getElementById + characters);
-        console.log("NumCharacters.value, : "+ NumCharacters.value);
-        console.log("Ncharacters, : "+characters);
-            var value = password(NumCharacters.value, characters);
-        console.log("passwordGen ---> " +value);
-    });
+
     
     
     
@@ -142,5 +199,4 @@ $(document).ready(function () {
 
     // Copy to clipboard
     //set clickListener // <button onclick="myFunction()">Copy text</button>
-    //function myFunction() {
-})
+    //function myFunction() {)
