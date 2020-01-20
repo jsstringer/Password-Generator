@@ -16,17 +16,13 @@ $(document).ready(function () {
     var upperSelector = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     var numSelector = "1234567890";
     var specialSelector = "!@#$%^&*()_+";
+    var passwordGenarated = "";
+    var numCharacters = "";
 
     characters = ['abcdefghijklmnopqrstuvwyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ','1234567890','!@#$%^&*()_+'];
-
-   // var LowerSelector = document.getElementById("LowerSelector");
-    //var UpperSelector = document.getElementById("UpperSelector");
-   // var NumSelector = document.getElementById("NumSelector");
-   // var SpecialSelector = document.getElementById("SpecialSelector");
+    
     var genaratecode = document.getElementById("Genaratecode");
-    var PasswordGenarated = document.getElementById("PasswordGenarated")
-    var numCharacters = document.getElementById("NumCharacters");
-    // checkboxes with new varables
+
 
 
 var length = parseInt(prompt(
@@ -90,9 +86,10 @@ function password (numCharacters){
         }
 
         console.log("Math.floor(Math.random() + numCharacters.length) " + Math.floor(Math.random() ));
-     
+        
+        passwordGenarated += passwordCharSet.charAt(Math.floor(Math.random() * numSet));
     //___________________________________________________________________
-        password += numCharacters.charAt(Math.floor(Math.random() * 9));
+
     
         return password;
     //--------------------------------------------------------------------    
@@ -118,7 +115,7 @@ function password (numCharacters){
 pass = [];
 
 // if conditions and the divide length based on the conditions
-$(".genaratecode").on("click", function (event) {
+/*$(".genaratecode").on("click", function (event) {
     event.preventDefault();
     var characters = "";
 
@@ -139,53 +136,6 @@ $(".genaratecode").on("click", function (event) {
     //include select checked boxes
     /*$("#LowerSelector").on("click", function () {
         
-        
-        check = $("#LowerSelector").prop("checked");
-        if(check) {
-             alert("Checkbox is checked.");
-        } else {
-            alert("Checkbox is unchecked.");
-        }
-        console.log("lower");
-    });
-
-    $("#UpperSelector").on("click", function () {
-        
-        check = $("#UpperSelector").prop("checked");
-        if(check) {
-             alert("Checkbox is checked.");
-        } else {
-            alert("Checkbox is unchecked.");
-        }
-        console.log("upper");
-    });
-
-    $("#NumSelector").on("click", function () {
-        
-        check = $("#NumSelector").prop("checked");
-        if(check) {
-             alert("Checkbox is checked.");
-        } else {
-            alert("Checkbox is unchecked.");
-        }
-        console.log("num");
-    });
-
-    $("#SpecialSelector").on("click", function () {
-        
-        check = $("#SpecialSelector").prop("checked");
-        if(check) {
-             alert("Checkbox is checked.");
-        } else {
-            alert("Checkbox is unchecked.");
-        }
-        console.log("special");
-    });*/
-
-    
-    
-    
-
 
      //when any choice is clicked
     //document.getElementById("Lower-Selector")
