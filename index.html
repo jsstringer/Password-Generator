@@ -30,9 +30,12 @@
               <h3>Password Generator</h3>
             
                 <!-- <textarea type="text" class="passwordGenarated"> -->
-              
-                <button type="submit" class="genaratecode">Generate</button>
-                <button type="copy" class="Copy-to-clipboard">Copy to Clipboard</button>
+              <div class="genaratedPassword" id="passwordGenarated">
+                <textarea class="passwordText" id="thePassword" placeholder="Your New Multlayered Password"></textarea>
+              </div>
+
+                <button type="submit" id="passwordButton" onclick="passwordGenarated(event)">Generate</button>
+                <button type="submit" class="CopyPW" id="copyPassword" onclick="copyPW(event)">Copy to Clipboard</button>
             </div>
           </div>
         </div>

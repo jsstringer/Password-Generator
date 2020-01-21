@@ -19,9 +19,16 @@ $(document).ready(function () {
     var passwordGenarated = "";
     var numCharacters = "";
 
-    characters = ['abcdefghijklmnopqrstuvwyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ','1234567890','!@#$%^&*()_+'];
+    //charsetarray
+    characters = [
+        'abcdefghijklmnopqrstuvwyz',
+        'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+        '1234567890',
+        '!@#$%^&*()_+'];
     
-    var genaratecode = document.getElementById("Genaratecode");
+    var passwordClick = document.querySelector("#passwordGenarated");
+    var copyPassword = document.querySelector("#copy");
+    var resetPassword = document.querySelector("reset");
 
 
 
@@ -49,28 +56,30 @@ var hasupperSelector = confirm(
 "Click OK to confirm including uppercase characters."
 );
 
-function password (numCharacters){
-    var password = {};
+function passwordClick(event) {
+    event.preventDefult();
+    //var password = {};
     console.log("line29-passwordfunction");
     // issue how to make the for loop = the new lower, upper, num & special vaules
     //create for loop to choose password charaters
     for (var ii = 0; ii <characters.length; ii++){
         
         if (lowerSelector === true) {
-            password = (result[lowerSelector] + 1);
+            password += lowerSelector;
         }
         else {
             console.log("not added");
         }
 
         if (upperSelector === true){
-            password = (result[upperSelector] + 1);
+            password += upperSelector;
         }
         else {
             console.log("not added");
         }
         if (numSelector === true){
-            password = (result[numSelector] + 1);
+            password += numSelector;
+            //password = (result[numSelector] + 1);
             //password = (NumCharacters + ( 1 * NumSelector));
         }
         else {
@@ -78,36 +87,21 @@ function password (numCharacters){
         }
 
         if (specialSelector === true){
-            password = (result[specialSelector] + 1);
+            password += specialSelector;
             
         }
         else {
             console.log("not added");
         }
 
+
         console.log("Math.floor(Math.random() + numCharacters.length) " + Math.floor(Math.random() ));
         
         passwordGenarated += passwordCharSet.charAt(Math.floor(Math.random() * numSet));
-    //___________________________________________________________________
-
-    
-        return password;
-    //--------------------------------------------------------------------    
+        console.log(passwordGenarated);
+        document.getElementById("passwordGenarated").textContent = passwordGenarated;
+        return password;    
     };
-
-        //use vaules for password selection
-        //include select checked boxes
-        //document.getElementById(""
 };       
-    //var passwordOptions = {
-    //    length: length,
-    //    hasSpecialCharacters: hasSpecialCharacters,
-    //    hasNumericCharacters: hasNumericCharacters,
-    //    hasLowerCasedCharacters: hasLowerCasedCharacters,
-    //    hasUpperCasedCharacters: hasUpperCasedCharacters
-  
-
-//   console.log(passwordOptions);
-
 pass = [];
 });
