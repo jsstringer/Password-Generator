@@ -1,45 +1,53 @@
 <!DOCTYPE html>
-<html lang=“en-us”>
+
+<html lang="en">
 
 <head>
-    <!--this is where you put your links to your CSS STYLE SHEETS - @FONT-FACE - BOOTSTRAPLINK - JAVASCRIPT-->
-    <link rel="stylesheet" type="text/css" href="styles.css"/>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-    
-<title>
-        <!--THIS IS WHERE YOU PUT THE WEBSITE TITLE-->
-    </title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
+  <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+  <title>JamesStringer's Password Generator</title>
 </head>
-<header>
 
-    
-</header>
+<header></header>
+
 <body>
-    <br>
-    <div class="container">
-      <div class="row">
-        <div class="col-xm-12 col-md-10 col-lg-8">
-          <div class="card">
-            <div class="card-body">
-              <h3>Password Generator</h3>
-            
-                <!-- <textarea type="text" class="passwordGenarated"> -->
-              <div class="genaratedPassword" id="passwordGenarated">
-                <textarea id="thePassword" placeholder="Your New Multlayered Password"></textarea>
-              </div>
-
-                <button type="submit" id="passwordClick" onclick="passwordClick()">Generate</button>
-                <button type="submit" id="copyPassword">Copy to Clipboard</button></div>
-            </div>
-          </div>
-        </div>
-  
+  <div class="container">
+    <div class="jumboton">
+      <h1 class="text-center display-3" id="thePWtitle">
+        Password Generator
+      </h1>
+      <hr />
+      <h4 class="text-center">Time to Create Your Password</h4>
+      <br />
+      <h5 class="text-center" id="thePWtext">
+        <textarea readonly class="form-control" id="thePassword" pattern=".{8,12}" required title="8 to 12 characters" placeholder="Your Multi Level Password"></textarea>
+      </h5>
+      <br />
+      <hr />
+      <div class="text-center">
+        <button class="btn btn-lg btn-outline-primary" type="submit" id="passwordClick" onclick="passwordClick()">
+          Generate
+        </button>
+        &nbsp;
+        <button class="btn btn-lg btn-outline-danger" type="submit" id="copyPassword">
+          Copy to Clipboard
+        </button>
       </div>
     </div>
-    <script type="text/javascript" src="script.js"></script>
-        </body>
+  </div>
 
-        </html>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
